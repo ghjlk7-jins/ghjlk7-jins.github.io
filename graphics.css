@@ -1,0 +1,419 @@
+img {
+    display: block;
+    width: 100%;
+}
+
+/*그래픽 페이지 스타일*/
+
+.section1 {
+    box-sizing: border-box;
+    padding-bottom: 100px;
+}
+
+.g-container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.g-item .img-box {
+    width: 100%;
+    height: 480px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 4px 4px 30px -20px #000000;
+}
+
+.g-item {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.g-item .zoom {
+    display: block;
+    width: 60px;
+    position: absolute;
+    bottom: 15%;
+    right: 0;
+}
+
+.g-item .text-box {
+    z-index: 50;
+    font-family: 'SUIT Variable', sans-serif;
+    margin-top: 20px;
+}
+
+.g-item .text-box p {
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    margin-bottom: 5px;
+}
+
+.g-item .text-box h4 {
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 400;
+}
+
+.g-item:hover {
+    filter: brightness(0.8);
+}
+
+/*타이틀 스타일*/
+
+.title-box {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.title-box .title {
+    width: 100%;
+    height: 110px;
+    margin-top: 70px;
+    padding: 30px 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #222222;
+    text-align: center;
+}
+
+.title-box .title h2 {
+    font-family: "Varela", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 1px;
+}
+
+.title-box .list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    height: 80px;
+    padding: 0 190px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #222222;
+}
+
+.title-box .list .line {
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background-color: #222222;
+}
+
+.title-box .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+.title-box .list li p {
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 500;
+}
+
+.section1 .container-title {
+    max-width: 1675px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    padding: 80px 0 50px;
+    box-sizing: border-box;
+}
+
+.section1 .container-title h3 {
+    font-family: "Varela", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    white-space: nowrap;
+}
+
+.section1 .container-title .title-line {
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #a1a1a1;
+}
+
+
+
+/*팝업 스타일*/
+
+.pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.pop .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop .cont {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 500px);
+    width: 950px;
+    overflow: auto;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.pop .cont img {
+    width: 100%;
+    display: block;
+}
+
+.pop {
+    display: none;
+}
+
+.pop.active {
+    display: block;
+}
+
+/*헤더 스타일*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 1px solid #000000;
+}
+
+header .inner-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+header .header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+header .inner-header nav {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+header .ham {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+header .ham .line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 1px;
+}
+
+/*햄버튼 인덱스 화면*/
+.m-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.m-menu .top {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ffffff;
+    padding-right: 34px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.m-menu .top .btn .line {
+    display: block;
+    width: 44px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ffffff;
+}
+
+.m-menu .top .btn2 {
+    display: block;
+    width: 28px;
+}
+
+.m-menu .top .btn .line4 {
+    transform: rotate(45deg);
+}
+
+.m-menu .top .btn .line5 {
+    transform: rotate(-45deg);
+}
+
+.m-menu .container {
+    max-width: 1540px;
+    width: 100%;
+    margin: 100px 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.m-menu .container .left h1 {
+    font-family: "Varela", sans-serif;
+    font-size: 55px;
+    line-height: 56px;
+    font-weight: 400;
+}
+
+.m-menu .container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 700px;
+}
+
+.m-menu .container .right .item h2 {
+    font-family: "Varela", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.m-menu .container .right .item h3 {
+    font-family: "Varela", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    position: relative;
+}
+
+.m-menu .container .right .item .text-box p {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    position: relative;
+}
+
+.m-menu .container .right .item .text-box p::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: all .3s ease;
+}
+
+.m-menu .container .right .item .text-box p:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.m-menu .container .right .item .text-box h3::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: all .3s ease;
+}
+
+.m-menu .container .right .item .text-box h3:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.m-menu .container .right .item {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.m-menu .container .right .item .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+/*햄버튼 스크립트 연동*/
+.m-menu {
+    display: none;
+}
+
+.m-menu.active {
+    display: block;
+}
+
+.section {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: table;
+    cursor: pointer;
+    width: 30px;
+}
+
+/*M-MENU 반응형*/
+
+@media (max-width:1200px) {
+    .m-menu .container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 120px 60px;
+    }
+
+    .m-menu .container .right {
+        width: 600px;
+    }
+}

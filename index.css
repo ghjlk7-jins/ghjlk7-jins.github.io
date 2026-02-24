@@ -1,0 +1,1548 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    border-bottom: 1px solid #000000;
+}
+
+header .inner-header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+header .header-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+header .header-menu li {
+    position: relative;
+}
+
+header .header-menu li::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #111111;
+    transition: all .3s ease;
+}
+
+header .header-menu li:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+header .inner-header nav {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+header .ham {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+header .ham .line {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 1px;
+}
+
+/*햄버튼 인덱스 화면*/
+.m-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    width: 100%;
+    height: 100%;
+    font-size: 20px;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.m-menu .top {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid #ffffff;
+    padding-right: 34px;
+    gap: 30px;
+    box-sizing: border-box;
+}
+
+.m-menu .top .btn .line {
+    display: block;
+    width: 44px;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #ffffff;
+}
+
+.m-menu .top .btn2 {
+    display: block;
+    width: 28px;
+}
+
+.m-menu .top .btn .line4 {
+    transform: rotate(45deg);
+}
+
+.m-menu .top .btn .line5 {
+    transform: rotate(-45deg);
+}
+
+.m-menu .container {
+    max-width: 1540px;
+    width: 100%;
+    margin: 100px 210px;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.m-menu .container .left h1 {
+    font-family: "Varela", sans-serif;
+    font-size: 55px;
+    line-height: 56px;
+    font-weight: 400;
+}
+
+.m-menu .container .right {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 700px;
+}
+
+.m-menu .container .right .item h2 {
+    font-family: "Varela", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.m-menu .container .right .item h3 {
+    font-family: "Varela", sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    position: relative;
+}
+
+.m-menu .container .right .item .text-box p {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+    position: relative;
+}
+
+.m-menu .container .right .item .text-box p::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: all .3s ease;
+}
+
+.m-menu .container .right .item .text-box p:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.m-menu .container .right .item .text-box h3::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    transition: all .3s ease;
+}
+
+.m-menu .container .right .item .text-box h3:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.m-menu .container .right .item {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.m-menu .container .right .item .text-box {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 10px;
+}
+
+/*햄버튼 스크립트 연동*/
+.m-menu {
+    display: none;
+}
+
+.m-menu.active {
+    display: block;
+}
+
+.section {
+    justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    display: table;
+    cursor: pointer;
+    width: 30px;
+}
+
+/*M-MENU 반응형*/
+
+@media (max-width:1200px) {
+    .m-menu .container {
+        max-width: 1200px;
+        width: 90%;
+        margin: 120px 60px;
+    }
+
+    .m-menu .container .right {
+        width: 600px;
+    }
+}
+
+/*섹션1*/
+
+.s1 {
+    background-color: #ffffff;
+    position: relative;
+    min-height: 100vh;
+    min-height: 100dvh;
+}
+
+.s1 .img-box {
+    width: 480px;
+    z-index: 50;
+}
+
+.s1 .title-box {
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    /* -55%로 살짝 위로 */
+    display: flex;
+    gap: clamp(16px, 3vw, 60px);
+}
+
+.s1 .title-box h1 {
+    font-family: "Tenor Sans", sans-serif;
+    font-weight: 400;
+    font-size: clamp(60px, 8vw, 120px);
+    opacity: 75%;
+}
+
+.s1 .title-box h1:nth-child(1) {
+    position: relative;
+    left: -15%;
+}
+
+.s1 .title-box h1:nth-child(2) {
+    position: relative;
+    right: -20%;
+}
+
+.s1 h4 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 22px;
+    line-height: 32px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.s1 h4 .inline {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px
+}
+
+.s1 h4 .bold {
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.s1 .skills {
+    /*스킬박스들이 모여있게 하기...*/
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /*폭 제한*/
+    max-width: 600px;
+    /* 숫자 조절하면 더 모이거나 퍼짐 */
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 14px 18px;
+}
+
+.s1 .skills .item {
+    border: 1px solid #111111;
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 15px;
+    display: block;
+    width: auto;
+    width: fit-content;
+    /* 스킬 박스 크기를 내용만큼만 조절 */
+}
+
+.s1 .skills .item:nth-child(even) {
+    background-color: #111111;
+    color: #ffffff;
+    border-color: #F3F3F3;
+}
+
+.s1 .skills .item:nth-child(odd) {
+    background-color: #ffffff;
+    color: #111111;
+    border-color: #111111;
+}
+
+.s1 .skills .item p {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 16px;
+    padding: 6px 15px;
+}
+
+/*섹션1*/
+@media (max-width:1200px) {
+    .s1 .title-box {
+        left: 18%;
+        transform: translate(0, 20%);
+    }
+
+    .s1 .img-box {
+        transform: translate(-3%, 35%);
+        position: relative;
+        width: 270px;
+    }
+
+    .s1 h4 {
+        margin-top: 120px;
+        text-align: center;
+    }
+
+    .s1 .title-box h1:nth-child(2) {
+        right: -14%;
+    }
+
+    .s1 .title-box h1:nth-child(1) {
+        left: -8%;
+    }
+}
+
+/*섹션2*/
+
+.s2 {
+    background-color: #ffffff;
+    margin-bottom: 120px;
+}
+
+.s2 .container {
+    max-width: 1685px;
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 120px;
+}
+
+.s2 .up {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    gap: 40px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #222222;
+}
+
+.s2 .up .left {
+    display: flex;
+    gap: 20px;
+}
+
+.s2 .up .left .img-box {
+    width: 260px;
+}
+
+.s2 .up .left .text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.s2 .up .left .text-box p {
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 28px;
+}
+
+.s2 .text-box .profile {
+    display: flex;
+    flex-direction: column;
+}
+
+.s2 .text-box .profile .kor-name {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 45px;
+    font-weight: 300;
+    line-height: 55px;
+}
+
+.s2 .text-box .profile .eng-name {
+    font-family: "Varela", sans-serif;
+    font-size: 45px;
+    font-weight: 400;
+    line-height: 50px;
+}
+
+.s2 .up .right {
+    padding-left: 20px;
+    box-sizing: border-box;
+    border-left: 1px solid #222222;
+    display: flex;
+    flex-direction: column;
+    gap: 57.5px;
+}
+
+.s2 .up .right p {
+    font-family: "Varela", sans-serif;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 28px;
+}
+
+.s2 .up .right .item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 230px;
+}
+
+.s2 .up .right .item h4 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 22px;
+}
+
+.s2 .down {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding-top: 40px;
+}
+
+.s2 .down .left {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-right: 95px;
+}
+
+.s2 .down .skillbar {
+    width: fit-content;
+    display: grid;
+    grid-template-columns: 160px 1fr 1fr;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+    max-width: 950px;
+}
+
+.s2 .down .left p {
+    font-family: "Varela", sans-serif;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+}
+
+.s2 .down .left .skillbar p {
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.s2 .down .divider {
+    width: 1px;
+    height: 40%;
+    background: #111111;
+}
+
+.s2 .down .skillbar .bar {
+    width: 720px;
+    height: 10px;
+    background-color: #D9D9D9;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+.s2 .down .skillbar .num::after {
+    content: '%';
+}
+
+.s2 .down .skillbar .bar .color {
+    width: 0;
+    height: 100%;
+    display: block;
+    border-radius: 0 10px 10px 0;
+}
+
+.s2 .down .skillbar1 .bar .color {
+    background-color: #002383;
+}
+
+.s2 .down .skillbar2 .bar .color {
+    background-color: #ffa600;
+}
+
+.s2 .down .skillbar3 .bar .color {
+    background-color: rgb(97, 0, 0);
+}
+
+.s2 .down .skillbar4 .bar .color {
+    background-color: rgb(48, 48, 48);
+}
+
+.s2 .down .skillbar .num {
+    display: inline-block;
+    min-width: 32px;
+    text-align: left;
+    width: fit-content;
+}
+
+.s2 .down .right {
+    padding-left: 20px;
+}
+
+.s2 .down .right p {
+    font-family: "Varela", sans-serif;
+    font-size: 26px;
+    line-height: 28px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.s2 .down .right .icons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 40px;
+}
+
+.s2 .down .right .icons img {
+    width: 60px;
+}
+
+@media (max-width:1200px) {
+    .s2 .container {
+        max-width: 1200px;
+        width: 90%;
+        margin-bottom: 120px;
+    }
+
+    .s2 .up .left .text-box {
+        width: 50%;
+    }
+
+    .s2 .up .left .text-box p {
+        font-size: 22px;
+    }
+
+    .s2 .text-box .profile .kor-name {
+        font-size: 35px;
+    }
+
+    .s2 .text-box .profile .eng-name {
+        font-size: 35px;
+    }
+
+    .s2 .up .right {
+        width: 50%;
+    }
+
+    .s2 .up .right .item {
+        gap: 30px;
+    }
+
+    .s2 .up .right .item h4 {
+        font-size: 18px;
+    }
+
+    .s2 .up .right p {
+        font-size: 22px;
+    }
+
+    .s2 .down .left {
+        margin-right: 50px;
+    }
+
+    .s2 .down .right .icons {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .s2 .down .skillbar {
+        max-width: 700px;
+    }
+
+    .s2 .down .skillbar .bar {
+        width: 440px;
+    }
+}
+
+/*섹션3~5 공통 스타일*/
+
+.s3 .container .text-box,
+.s4 .container .text-box,
+.s5 .container .text-box {
+    max-width: 940px;
+    width: 100%;
+}
+
+.s3 .text-box .title h4,
+.s4 .text-box .title h4,
+.s5 .text-box .title h4 {
+    color: #444444;
+}
+
+.s3 .text-box .keyword span,
+.s4 .text-box .keyword span,
+.s5 .text-box .keyword span {
+    color: #444444;
+}
+
+.s3 .sub-info h3,
+.s4 .sub-info h3,
+.s5 .sub-info h3 {
+    color: #444444;
+}
+
+/*섹션3*/
+
+.s3 {
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.s3 .container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.s3 .img-box {
+    width: 916px;
+    display: block;
+}
+
+.s3 .container .text-box {
+    padding: 150px 130px 120px 90px;
+    box-sizing: border-box;
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+.s3 .text-box .title {
+    margin-bottom: 50px;
+}
+
+.s3 .text-box .title h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.s3 .text-box .title h2 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.s3 .text-box .title h2 span {
+    font-family: 'Sylfaen', serif;
+    font-size: 50px;
+    font-weight: 400;
+}
+
+.s3 .text-box p {
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.s3 .text-box .keyword {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.s3 .text-box .keyword span {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.s3 .container .sub-info {
+    font-family: "Varela", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.s3 .container .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.s3 .container .icons .icon {
+    width: 60px;
+}
+
+.s3 .timeframe {
+    text-align: center;
+}
+
+.s3 .sub-info {
+    margin-bottom: 50px;
+}
+
+.s3 .sub-info h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.s3 .timeframe p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.s3 .contribution {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.s3 .contribution p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.s3 .contribution p .span1 {
+    font-size: 26px;
+    color: #0051CA;
+}
+
+.s3 .contribution p .span2 {
+    font-size: 26px;
+    color: #5F6268;
+}
+
+.s3 .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    margin-left: 0;
+}
+
+.s3 .btns h3 {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    position: relative;
+}
+
+.s3 .btns h3::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #222222;
+    transition: all .3s ease;
+}
+
+.s3 .btns h3:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.s3 .btns .btn {
+    width: fit-content;
+    border: none;
+    background-color: inherit;
+}
+
+.s3 .btns .btn h3 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*섹션3 반응형*/
+
+@media (max-width:1200px) {
+
+    .s3,
+    .s4 {
+        height: 100vh;
+        overflow: visible;
+        margin-bottom: 200px;
+    }
+
+    .s3 .container,
+    .s4 .container {
+        max-width: 1200px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .s3 .text-box .title h2 {
+        font-size: 25px;
+    }
+
+    .s3 .text-box .title h2 span {
+        font-size: 35px;
+    }
+
+    .s3 .img-box,
+    .s4 .img-box {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto
+    }
+
+    .s3 .text-box p {
+        font-size: 16px;
+        max-width: 430px;
+        width: 100%;
+    }
+
+    .s3 .container .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .s3 .container .icons .icon {
+        width: 40px;
+    }
+
+    .s3 .sub-info h3 {
+        font-size: 20px;
+    }
+
+    .s3 .btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .s3 .container .text-box,
+    .s4 .container .text-box {
+        padding: 40px 40px;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .s3 .container .text-box p br,
+    .s4 .container .text-box p br {
+        display: none;
+        line-height: 30px;
+    }
+
+    .s3 .container .sub-info,
+    .s4 .container .sub-info {
+        display: flex;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #fullpage .section {
+        height: auto !important;
+        min-height: auto !important;
+    }
+
+    #fullpage .section .container {
+        height: auto !important;
+    }
+}
+
+/*섹션4*/
+
+.s4 {
+    background-color: #ffffff;
+}
+
+.s4 .container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.s4 .img-box {
+    width: 916px;
+    display: block;
+}
+
+.s4 .container .text-box {
+    padding: 150px 130px 120px 90px;
+    box-sizing: border-box;
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+.s4 .text-box .title {
+    margin-bottom: 50px;
+}
+
+.s4 .text-box .title h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.s4 .text-box .title h2 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.s4 .text-box .title h2 span {
+    font-family: "Abhaya Libre", serif;
+    font-size: 50px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.s4 .text-box p {
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.s4 .text-box .keyword {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.s4 .text-box .keyword span {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.s4 .container .sub-info {
+    font-family: "Varela", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.s4 .container .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.s4 .container .icons .icon {
+    width: 60px;
+}
+
+.s4 .timeframe {
+    text-align: center;
+}
+
+.s4 .sub-info {
+    margin-bottom: 50px;
+}
+
+.s4 .sub-info h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.s4 .timeframe p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.s4 .contribution {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.s4 .contribution p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.s4 .contribution p .span1 {
+    font-size: 26px;
+    color: #0051CA;
+}
+
+.s4 .contribution p .span2 {
+    font-size: 26px;
+    color: #5F6268;
+}
+
+.s4 .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    margin-left: 0;
+}
+
+.s4 .btns h3 {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    position: relative;
+}
+
+.s4 .btns h3::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #222222;
+    transition: all .3s ease;
+}
+
+.s4 .btns h3:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.s4 .btns .btn {
+    width: fit-content;
+    border: none;
+    background-color: inherit;
+}
+
+.s4 .btns .btn h3 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*섹션4 반응형*/
+
+@media (max-width:1200px) {
+
+    .s4 .text-box .title h2 {
+        font-size: 25px;
+    }
+
+    .s4 .text-box .title h2 span {
+        font-size: 35px;
+    }
+
+    .s4 .img-box {
+        width: 650px;
+    }
+
+    .s4 .text-box p {
+        font-size: 16px;
+        max-width: 430px;
+        width: 100%;
+    }
+
+    .s4 .container .text-box {
+        padding: 40px 40px;
+    }
+
+    .s4 .container .icons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .s4 .container .icons .icon {
+        width: 40px;
+    }
+
+    .s4 .sub-info h3 {
+        font-size: 20px;
+    }
+
+    .s4 .btns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*섹션5*/
+
+.s5 {
+    background-color: #ffffff;
+}
+
+.s5 .container {
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+.s5 .img-box {
+    width: 916px;
+    display: block;
+}
+
+.s5 .container .text-box {
+    padding: 180px 130px 120px 90px;
+    box-sizing: border-box;
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+.s5 .text-box .title {
+    margin-bottom: 50px;
+}
+
+.s5 .text-box .title h4 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.s5 .text-box .title h2 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+.s5 .text-box .title h2 span {
+    font-family: "Abhaya Libre", serif;
+    font-size: 50px;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.s5 .text-box p {
+    margin-bottom: 50px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 36px;
+}
+
+.s5 .text-box .keyword {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 36px;
+    letter-spacing: 0.5px;
+}
+
+.s5 .text-box .keyword span {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 45px;
+    text-transform: uppercase;
+}
+
+.s5 .container .sub-info {
+    font-family: "Varela", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.s5 .container .icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.s5 .container .icons .icon {
+    width: 60px;
+}
+
+.s5 .timeframe {
+    text-align: center;
+}
+
+.s5 .sub-info {
+    margin-bottom: 50px;
+}
+
+.s5 .sub-info h3 {
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.s5 .timeframe p {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.s5 .contribution {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+.s5 .contribution p {
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.s5 .contribution p .span1 {
+    font-size: 26px;
+    color: #0051CA;
+}
+
+.s5 .contribution p .span2 {
+    font-size: 26px;
+    color: #5F6268;
+}
+
+.s5 .btns {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    gap: 30px;
+    margin-left: 0;
+}
+
+.s5 .btns h3 {
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+    position: relative;
+}
+
+.s5 .btns h3::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #222222;
+    transition: all .3s ease;
+}
+
+.s5 .btns h3:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.s5 .btns .btn {
+    width: fit-content;
+    border: none;
+    background-color: inherit;
+}
+
+.s5 .btns .btn h3 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+/*줄 간격 관련*/
+
+.s3 .text-box p,
+.s4 .text-box p,
+.s5 .text-box p {}
+
+/*섹션5-5*/
+
+.s5-5 .container {
+    margin: 300px auto;
+}
+
+.s5-5 .upper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+}
+
+.s5-5 .upper .arrow {
+    width: 50px;
+    height: 50px;
+}
+
+.s5-5 .upper .img-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.s5-5 .upper .img-group .img-box {
+    width: 300px;
+}
+
+.s5-5 .upper .img-group .img-box .img1,
+.s5-5 .upper .img-group .img-box .img3 {
+    transform: scale(0.9) translate(0, 5%);
+}
+
+.s5-5 .upper .img-group .img-box .img1,
+.s5-5 .upper .img-group .img-box .img2,
+.s5-5 .upper .img-group .img-box .img3 {
+    box-shadow: 3px 3px 10px 0px #a7a7a7
+}
+
+.s5-5 .text-box {
+    text-align: center;
+}
+
+.s5-5 .text-box h3 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 25px;
+    font-weight: 200;
+}
+
+.s5-5 .text-box h3 span {
+    font-weight: 300;
+}
+
+.s5-5 .text-box .btn {
+    width: fit-content;
+    margin: 50px auto;
+}
+
+.s5-5 .text-box .btn h4 {
+    position: relative;
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 6px;
+}
+
+.s5-5 .text-box .btn h4:hover::before {
+    left: 0;
+    width: 100%;
+}
+
+.s5-5 .text-box .btn h4::before {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background-color: #222222;
+    transition: all .3s ease;
+}
+
+/*섹션6*/
+
+.s6 {
+    background-color: #ffffff;
+}
+
+.s6 .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1920px;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.s6 .container .left {
+    width: 100%;
+    height: 100%;
+    padding: 170px 120px 120px 100px;
+    box-sizing: border-box;
+}
+
+.s6 .left .title {
+    text-align: right;
+    width: fit-content;
+}
+
+.s6 .left .title h2 {
+    font-family: "Varta", sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 52px;
+}
+
+.s6 .left .title h3 {
+    font-family: 'SUIT Variable', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 26px;
+}
+
+.s6 .container .right {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+    padding: 170px 120px 120px 100px;
+    box-sizing: border-box;
+}
+
+.s6 .contact {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.s6 .contact h3 {
+    font-family: "Varta", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.s6 .contact .item {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 20px;
+    font-family: 'SUIT Variable', sans-serif;
+}
+
+.s6 .contact .item h3 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.s6 .contact .item h4 {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.s6 .contact img {
+    width: 25px;
+}
+
+/*팝업*/
+
+.pop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+
+.pop .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.pop .cont {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 500px);
+    width: 1000px;
+    overflow: auto;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.pop .cont img {
+    width: 100%;
+    display: block;
+}
+
+.pop1 {
+    display: none;
+}
+
+.pop1.active {
+    display: block;
+}
+
+.pop2 {
+    display: none;
+}
+
+.pop2.active {
+    display: block;
+}
+
+.pop3 {
+    display: none;
+}
+
+.pop3.active {
+    display: block;
+}
